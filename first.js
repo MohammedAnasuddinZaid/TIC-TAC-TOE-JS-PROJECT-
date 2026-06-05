@@ -14,16 +14,17 @@ const winiingpatter = [
     [1,4,7],
     [2,5,8],
     [3,4,5],
-    [6,7,8]
+    [6,7,8],
+    [2,4,6]
 ];
 
 const disablebloxe = () => {
-    for(box of boxes){
+    for(let box of boxes){
         box.disabled = true
     }
 }
 const enablebloxe = () => {
-    for(box of boxes){
+    for(let box of boxes){
         box.disabled = false;
         box.innerText = ""
     }
@@ -81,6 +82,7 @@ const showwinner = (winner) => {
 
 const resetGame = () => {
     turnofo=true;
+    count = 0;
     enablebloxe();
     winnermessagecontainer.classList.add("hide")
 }
